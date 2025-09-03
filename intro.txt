@@ -1,4 +1,4 @@
-Type Script:
+Typescript:
         it is a superset of the javascript which add the static typing
 
 javascript is a loosely typed language 
@@ -8,7 +8,7 @@ In JavaScript, function parameters and variables don't have any information
 
 So developers need to look at documentation, or guess based on the implementation.
 
-TypeScript allows specifying the types of data being passed around within the code, and has the ability to report errors when the types don't match.
+Typescript allows specifying the types of data being passed around within the code, and has the ability to report errors when the types don't match.
 
 
 // *******************************************************
@@ -79,8 +79,8 @@ const user: User = {
 
 //******************************************************************************
 
-TypeScript Special Types
-    1.any: When migrating JavaScript code to TypeScript
+Typescript Special Types
+    1.any: When migrating JavaScript code to Typescript
 When working with dynamic content where the type is unknown
 When you need to opt out of type checking for a specific case
 
@@ -133,7 +133,7 @@ tuple:  it is a typed array with the pre defined length and types of the each in
 // *****************************************************************************************
 
 object types:
-    TypeScript has a specific syntax for typing objects.
+    Typescript has a specific syntax for typing objects.
 
     eg
     const car :{type:string,model:string,year:number}={
@@ -151,7 +151,7 @@ nameAgeMap.Mark = "Fifty"; // Error: Type 'string' is not assignable to type 'nu
 
 
 // ***********************************************************************
-TypeScript Type Aliases and Interfaces
+Typescript Type Aliases and Interfaces
 
 
 type Aliases:
@@ -197,7 +197,7 @@ const rectangle: Rectangle = {
 //  ************************************************************
 
 functions :
-TypeScript has a specific syntax for typing function parameters and return values.
+Typescript has a specific syntax for typing function parameters and return values.
 
 1.return value
     function gettime() :number //this is the return type value
@@ -236,13 +236,13 @@ function add(a:number,b:number,...rest:number[]){
 
 //  **********************************************************************************
 
-TypeScript Casting:
+Typescript Casting:
 
 
 
 //  ********************************************************************************
 
-TypeScript Classes:
+Typescript Classes:
     
     eg: class Person{
         private name:string;
@@ -256,4 +256,44 @@ return this.name;
 
     }
 const person=new Person("jayesh");
-    console.log(person.name)
+    console.log(person.name.getname());
+
+    Parameter Properties
+TypeScript provides a convenient way to define class members in the constructor, by adding a visibility modifier to the parameter.
+
+class Person{
+    public constructor(private name:string){}
+     public getname():string{
+        return this.name;
+     }
+}
+
+
+// it also have a readonly  which prevent class menber from being changed
+
+class Person{
+    private readonly name:string;
+
+    public constructor(name:string)
+}
+
+interface can be used to define the type a class must follow through the implements keyword.
+
+interface shape{
+    getarea:()=>number;
+}
+class Rectangle implements Shape {
+  public constructor(protected readonly width: number, protected readonly height: number) {}
+
+  public getArea(): number {
+    return this.width * this.height;
+  }
+}
+
+
+
+inheritance:
+Inheritance: Extends
+Classes can extend each other through the extends keyword.
+
+A class can only extend one other class.
