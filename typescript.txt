@@ -1,0 +1,16 @@
+typescript :
+    it is a better version of js with more features
+                    or
+    typescript is the superset of js with all the the features of the js + addition features;
+
+
+*********************************************************************
+
+data types:
+    1. primitive: number,string,bool,null,undefined,bigint,symbol
+    2.object: array,tuple,object
+    3.special: any,void,never,unknown
+    4.advance: union,intersection,type Alias,enum,literals type
+    5.function
+
+*********************************************************************
