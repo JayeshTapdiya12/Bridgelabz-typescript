@@ -15,3 +15,4 @@ function totalprice(price, item, text) {
 totalprice(100, 50);
 totalprice(10, 50);
 totalprice(100, 70, "hello");
+// we can also use the any if we dont know the type of parameter
