@@ -17,3 +17,6 @@ var studentData = {
     age: 25,
     course: "MERN",
 };
+// intersection type
+//  the main difference between the interface and type is that the we can not do the union in the interface but in the type we can do the interface;
+// but if we use the interface we can use the extend to combine the datatype;
